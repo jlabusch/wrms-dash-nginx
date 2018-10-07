@@ -23,7 +23,7 @@ start:
         --volume $(STATIC_VOL):/usr/share/nginx/html/static:ro \
         --rm \
         $(IMAGE)
-	$(DOCKER) logs -f $(NAME)
+	$(DOCKER) logs -f $(NAME) &
 
 stop:
 	$(DOCKER) stop $(NAME)
